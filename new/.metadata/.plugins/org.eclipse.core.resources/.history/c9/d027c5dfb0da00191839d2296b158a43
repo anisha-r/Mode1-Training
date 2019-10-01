@@ -1,0 +1,26 @@
+package com.jehanat;
+
+	import java.rmi.RemoteException;
+
+
+
+	public class MainApp {
+		
+		public static void main(String[] args) {
+			
+			int  result=0;
+			
+			SapCodeProxy ani = new SapCodeProxy();
+			
+			try {
+				result= ani.getInt();
+				System.out.println("Jehanat details " +result);
+			} catch (RemoteException e) {
+				e.printStackTrace();
+			}
+			
+			
+			
+		}
+
+}

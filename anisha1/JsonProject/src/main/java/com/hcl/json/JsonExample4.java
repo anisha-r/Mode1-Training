@@ -1,0 +1,20 @@
+package com.hcl.json;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class JsonExample4 {
+	public static void main(String[] args) {
+	  JSONArray arr = new JSONArray(); { 
+	  for (int i = 0; i < 3; i++) {
+	JSONObject obj=new JSONObject();
+	  obj.put(1,1000*i);
+	  obj.put(2,"anisha");
+	  obj.put(3,2*i);
+	  arr.add(new Integer(27));    
+ arr.add(new Double(600000));   
+  arr.add(obj);
+}
+System.out.print(arr); 
+}
+	}}

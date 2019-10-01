@@ -1,0 +1,10 @@
+package com.hcl.student.dao;
+
+public interface StudentDao {
+	
+	public String addStudent(student);
+	public String getStudent(int RollNum);
+	public String updateStudent(int Rollnum);
+	
+
+}

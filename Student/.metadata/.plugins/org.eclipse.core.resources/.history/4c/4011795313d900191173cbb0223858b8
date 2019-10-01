@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="java8streamsModels">
+        <property name="context-root" value="java8streamsModels"/>
+        <property name="java-output-path" value="/java8streamsModels/target/classes"/>
+    </wb-module>
+</project-modules>

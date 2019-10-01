@@ -1,0 +1,30 @@
+package com.hcl.files;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class Finput {
+  /**
+   * Method used for input stream.
+   * @param args to give input for files.
+   */
+  public static void main(String[] args) {
+    try {
+      FileInputStream fin = new FileInputStream("C:/hcljava/Day4/Exception/src/com/hcl/ex/Custom.java");
+      int ch;
+      while((ch = fin.read()) != -1) {
+      System.out.print((char)ch);
+fin.close();
+				
+			}
+		} catch (FileNotFoundException e) {
+			
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

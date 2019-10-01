@@ -1,0 +1,24 @@
+package com.javacodegeeks.examples.jaxWsAnnotations.client;
+
+import java.rmi.RemoteException;
+
+import com.javacodegeeks.examples.jaxWsAnnotations.webresult.WSAnnotationsWebResultIProxy;
+
+public class Anisha {
+	
+	public static void main(String[] args) {
+		
+		WSAnnotationsWebResultIProxy proxy= new WSAnnotationsWebResultIProxy();
+		
+		float res=0;
+
+		try {
+			res= proxy.celsiusToFarhenheit(21);
+		System.out.println(+res);
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

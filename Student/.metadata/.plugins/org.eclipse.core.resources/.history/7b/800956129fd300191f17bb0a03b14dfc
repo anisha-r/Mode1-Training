@@ -1,0 +1,9 @@
+package com.hcl.student.dao;
+
+public interface StudentBal {
+	
+	public static String  getStudentBal(int RollNum) {
+		return new getStudentDao().withdrawAmountDao(RollNum);
+	}
+
+}

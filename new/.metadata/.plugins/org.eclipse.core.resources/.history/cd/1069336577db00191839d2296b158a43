@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="rest/files/upload" method="post" enctype="multipart/form-data">
+	   <p>
+		Select a file : <input type="file" name="file" size="45" />
+	   </p>
+	   <label for="fileupload"> Select a file to upload</label> <br><input type="image" src="/wp-content/uploads/sendform.png" alt="Submit" width="100">
+
+	   <input type="submit" value="Upload File" />
+</form>
+</body>
+</html>

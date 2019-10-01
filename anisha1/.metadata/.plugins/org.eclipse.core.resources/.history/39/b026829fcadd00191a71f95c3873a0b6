@@ -1,0 +1,30 @@
+package com.hcl.json;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
+public class ReadJson {
+	public static void main(String[] args) throws IOException {
+		  try {
+			BufferedReader objReader = new BufferedReader(new FileReader("C:\\Users\\Coalesce\\Desktop\\employee.json"));
+			JSONObject jsonObject = (JSONObject)JSONValue.parse(objReader);
+			  String strCurrentLine;
+
+			   while ((strCurrentLine = objReader.readLine()) != null) {
+			    System.out.println(strCurrentLine);
+			   }
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

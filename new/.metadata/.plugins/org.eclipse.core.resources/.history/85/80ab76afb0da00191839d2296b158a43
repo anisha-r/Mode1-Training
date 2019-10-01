@@ -1,0 +1,34 @@
+package com.anisha;
+
+import java.rmi.RemoteException;
+
+import com.jaanu.JananiDemoProxy;
+import com.jehanat.SapCodeProxy;
+
+public class MainApp {
+	
+	public static void main(String[] args) {
+		
+		int  result=0;
+		
+		AnishaProxy ani = new AnishaProxy();
+		SapCodeProxy ani1 = new SapCodeProxy();
+		
+		try {
+			result= ani.getInt();
+			System.out.println("Anisha details " +result);
+			result= ani1.getInt();
+			System.out.println("Jehanat details " +result);
+			JananiDemoProxy ani2 = new JananiDemoProxy();
+			System.out.println("Anisha details " +result);
+			
+			
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+
+}

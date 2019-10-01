@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 3 Sep, 2019 3:08:07 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.journaldev.jaxrs.model.Employee" table="EMPLOYEE">
+        <id name="employee" type="int">
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name" />
+        </property>
+        <property name="salary" type="java.lang.String">
+            <column name="salary" />
+        </property>
+        <property name="id" type="java.lang.String">
+            <column name="id" />
+        </property>
+    </class>
+</hibernate-mapping>

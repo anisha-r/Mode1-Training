@@ -1,0 +1,38 @@
+package com.hcl.quiz;
+
+public class Roman {
+
+ 
+    static String intToRoman(int num)  
+    {  
+         
+     
+        String c[] = {"", "C", "CC", "CCC", "CD", "D",  
+                            "DC", "DCC", "DCCC", "CM"}; 
+        String x[] = {"", "X", "XX", "XXX", "XL", "L",  
+                            "LX", "LXX", "LXXX", "XC"}; 
+        String i[] = {"", "I", "II", "III", "IV", "V",  
+                            "VI", "VII", "VIII", "IX"}; 
+              
+        
+      
+        String hundereds = c[(num%100)]; 
+        String tens = x[(num%100)/10]; 
+        String ones = i[num%10]; 
+              
+        String ans =  hundereds + tens + ones; 
+              
+        return ans; 
+    } 
+      
+  
+    public static void main(String []args) 
+    { 
+        int number = 3549; 
+        System.out.println(intToRoman(number)); 
+          
+    } 
+  
+}
+
+

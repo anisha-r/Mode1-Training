@@ -1,0 +1,66 @@
+package com.hcl.ems;
+
+import java.sql.Date;
+
+public class Employee {
+	private int empId;
+	private String empName;
+	private String empEmail;
+	private int empMobNo;
+	private String empDptName;
+	private Date empDateJoin;
+	private int empMgrId;
+	private int empLeaveBal;
+	public int getEmpId() {
+		return empId;
+	}
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+	public String getEmpName() {
+		return empName;
+	}
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+	public String getEmpEmail() {
+		return empEmail;
+	}
+	public void setEmpEmail(String empEmail) {
+		this.empEmail = empEmail;
+	}
+	public int getEmpMobNo() {
+		return empMobNo;
+	}
+	public void setEmpMobNo(int empMobNo) {
+		this.empMobNo = empMobNo;
+	}
+	public String getEmpDptName() {
+		return empDptName;
+	}
+	public void setEmpDptName(String empDptName) {
+		this.empDptName = empDptName;
+	}
+	public Date getEmpDateJoin() {
+		return empDateJoin;
+	}
+	public void setEmpDateJoin(Date empDateJoin) {
+		this.empDateJoin = empDateJoin;
+	}
+	public int getEmpMgrId() {
+		return empMgrId;
+	}
+	public void setEmpMgrId(int empMgrId) {
+		this.empMgrId = empMgrId;
+	}
+	public int getEmpLeaveBal() {
+		return empLeaveBal;
+	}
+	public void setEmpLeaveBal(int empLeaveBal) {
+		this.empLeaveBal = empLeaveBal;
+	}
+	
+	
+	
+
+}

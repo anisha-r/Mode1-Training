@@ -1,0 +1,25 @@
+package com.anisha;
+
+import java.rmi.RemoteException;
+
+public class MainApplication {
+	
+	public static void main(String[] args) {
+		
+		int result=0;
+		int result1=0;
+		CalculatorProxy calculatorProxy= new CalculatorProxy();
+		
+		try {
+			result1 = calculatorProxy.mul(2, 4);
+			result= calculatorProxy.add(2, 10);
+			System.out.println("Add of two numbers:" +result);
+			System.out.println("Multiplication of two numbers:" +result1);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

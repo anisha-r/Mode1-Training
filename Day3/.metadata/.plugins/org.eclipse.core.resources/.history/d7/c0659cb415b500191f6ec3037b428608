@@ -1,0 +1,44 @@
+package com.hcl.quiz;
+
+public class AlpNo {
+
+
+		 
+	     static String intToAlp(int num)  
+	    {  
+	         
+	       
+	        String c[] = {"", "hundred and ", "two hundred and ", "three hundred and ", "four hundred and ", "five hundred and",  
+	                            "six hundred and ", "seven hundred and", "eight hundred and", "nine hundred and"}; 
+	        String x[] = {"",  "twenty", "thirty", "forty", "fifty",  
+	                            "sixty", "seventy", "eighty", "ninety"};
+	        String f[] = {"", "eleven", "twelve", "thirteen", "forteen", "fifteen",  
+                    "sixteen", "seventeen", "eighteen", "nineteen"};
+	        String j = "ten";
+	        String i[] = {"", "one", "two", "three", "four", "five",  
+	                            "six", "seven", "eight", "nine"}; 
+	              
+	        
+	        String hundereds = c[(num/100)];
+	        
+	        String tens = x[(num%100)/10]; 
+	        
+	        String ones = i[num%10]; 
+	              
+	        String ans =  hundereds + tens + ones; 
+	              
+	        return ans; 
+	    } 
+	      
+	  
+	    public static void main(String []args) 
+	    { 
+	        int number = 135; 
+	        System.out.println(intToAlp(number)); 
+	          
+	    } 
+	  
+	}
+
+
+

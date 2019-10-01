@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<employ
+xmlns:xsi="https://www.w3.org/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation = "employ.xsd">
+
+  <employ category="Contractor">
+    <empNo>1</empNo>
+    <empName>Jehanat</empName>
+    <salary>40000</salary>
+    <band>M</band>
+    <dateOfJoin>2019-09-17</dateOfJoin>
+  </employ>
+<employ category="Manager">
+    <empNo>2</empNo>
+    <empName>Shresth</empName>
+    <salary>40000</salary>
+    <band>M</band>
+    <dateOfJoin>2019-09-17</dateOfJoin>
+  </employ>
+<employ category="Engineer">
+    <empNo>3</empNo>
+    <empName>Ashraf</empName>
+    <salary>40000</salary>
+    <band>M</band>
+    <dateOfJoin>2019-09-17</dateOfJoin>
+  </employ>
+
+</employ>

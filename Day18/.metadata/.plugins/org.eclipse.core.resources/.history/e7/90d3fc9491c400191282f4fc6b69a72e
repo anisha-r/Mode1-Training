@@ -1,0 +1,7 @@
+package com.hcl.beans;
+
+public class Hello {
+	
+	private String message="good morning..";
+
+}

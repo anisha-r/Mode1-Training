@@ -1,0 +1,9 @@
+package com.anisha;
+
+public class Anisha {
+	
+	public String getName(String a,String b){
+		return a="Anisha,51823111", b="anisharavi101@gmail.com"; 
+	}
+
+}

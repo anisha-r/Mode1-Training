@@ -1,0 +1,25 @@
+package com.hcl.practice;
+
+class First {
+	public void show() {
+		System.out.println("show method from class first..");
+	
+	}
+	   
+}
+class Second extends First {
+	public void show() {
+		
+		System.out.println("show method from class Second..");
+	
+	}
+	   
+}
+
+
+public class InhDemo {
+     public static void main(String[] args) {
+		First obj=new Second();
+		obj.show();
+	}
+}

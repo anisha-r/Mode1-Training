@@ -1,0 +1,82 @@
+package com.hcl.project;
+
+
+import java.util.List;
+
+
+public class CustomerBAL {
+static StringBuilder sb=new StringBuilder();
+public void writeCustomerFileBal() {
+	new CustomerDAO().writeCustomerFileDao();
+}
+
+public void readCustomerFileBal() {
+	new CustomerDAO().readCustomerFileDao();
+}
+	
+	public boolean addCustomerBal(Customer objCustomer) throws CustomerException{
+		boolean isAdded=true;
+		
+		if(objCustomer.getCustId() <= 0) {
+			sb.append("Customer id cannot be Negative or Zero \r\n" );
+			isAdded=false;
+		}
+		if(objCustomer.getCustName().length() <= 5) {
+			sb.append("Customer name should be more than 5 characters \r\n" );
+			isAdded=false;
+		}
+		
+		if(objCustomer.getAnnualPremium() <= 20000) {
+			sb.append("Annual premium is more than 20000 \r\n");
+			isAdded=false;
+		}
+		if(objCustomer.getAnnualPremium() >= 100000) {
+			sb.append("Annual Premium less than 100000 \r\n");
+			isAdded=false;
+		}
+		if(objCustomer.getModalPremium() <=1000) {
+			sb.append("Modal Premium more than 1000 \r\n");
+			isAdded=false;
+		}
+		if(objCustomer.getModalPremium() >=50000) {
+			sb.append("Modal Premium less than 50000 \r\n");
+			isAdded=false;
+		}
+		if(objCustomer.getPaymentMode() > 0) {
+			sb.append("	should be 1 or 2 or 3");
+			isAdded=false;
+		}
+		if(objCustomer.getPaymentMode() < 3) {
+			sb.append("	should be 1 or 2 or 3");
+			isAdded=false;
+		}
+		if(isAdded==false) {
+			try {
+				throw new CustomerException(sb.toString());
+			} catch (CustomerException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} else {
+			new CustomerDAO().addCustomerDao(objCustomer);
+		}
+		return isAdded;
+	}
+	
+	public Customer searchCustomerBal(int custId) {
+		return new CustomerDAO().searchCustomerDao(custId);
+	}
+	
+	public List<Customer> showCustomerBal() {
+		return new CustomerDAO().showStudentDao();
+	}
+	
+	public String updateCustomerBal(Customer objCustomer) {
+		return new CustomerDAO().updateCustomerDao(objCustomer);
+	}
+	
+	public String deleteCustomerBal(int custId) {
+		return new CustomerDAO().deleteCustomerDao(custId);
+	}
+
+}

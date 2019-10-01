@@ -1,0 +1,53 @@
+package com.hcl.obj;
+
+public class NumDisp {
+	
+
+		public void show(int n) {
+			int i = 0,r=0;
+			while(n >= 0) {
+				n = n%10;
+				r = n*10 + r;
+				n= n/10;
+				}
+		switch(Integer.reverse(n)) {
+		
+		case 1:
+			System.out.println("One");
+			break;
+		case 2:
+			System.out.println("Two");
+			break;
+		case 3:
+			System.out.println("Three");
+			break;
+		case 4:
+			System.out.println("Four");
+			break;
+		case 5:
+			System.out.println("Five");
+			break;
+		case 6:
+			System.out.println("Six");
+			break;
+		case 7:
+			System.out.println("Seven");
+			break;
+		case 8:
+			System.out.println("Eight");
+			break;	
+		case 9:
+			System.out.println("Nine");
+			break;		
+		default:
+			System.out.println("Zero");
+		}
+	}
+	public static void main(String[] args) {
+		int n=123;
+		new NumDisp().show(n);
+	}
+
+
+
+}

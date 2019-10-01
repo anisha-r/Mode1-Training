@@ -1,0 +1,67 @@
+package com.hcl.json;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+public class ReadJson1 {
+	
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) {
+	        //JSON parser object to parse read file
+	        JSONParser jsonParser = new JSONParser();
+	         
+	        try (FileReader reader = new FileReader("C:/Users/Coalesce/Downloads/employee.json.json"))
+	        {
+	            //Read JSON file
+	            Object obj = jsonParser.parse(reader);
+	 
+	            JSONArray employee = (JSONArray) obj;
+	          //  Object obj  = parser.parse(content);
+	            JSONArray array = new JSONArray();
+	            array.add(obj);
+	            
+	          //  System.out.println(employee);
+	             
+	            //Iterate over employee array
+	            employee.forEach( emp -> parseEmployeeObject( (JSONObject) emp ) );
+	 
+	        } catch (FileNotFoundException e) {
+	            e.printStackTrace();
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        } catch (ParseException e) {
+	            e.printStackTrace();
+	        }
+	    }
+	 
+	    private static void parseEmployeeObject(JSONObject employee)
+	    {
+	        //Get employee object within list
+	        JSONObject employeeObject = (JSONObject) employee.get("employees");
+	         
+	        //Get employee first name
+	        int no = (Integer) employeeObject.get("no");   
+	        System.out.println(no);
+	         
+	        //Get employee last name
+	        String Name = (String) employeeObject.get("name"); 
+	        System.out.println(Name);
+	         
+	        //Get employee website name
+	        int salary = (Integer) employeeObject.get("salary");   
+	        System.out.println(salary);
+	        
+	        String band = (String) employeeObject.get("band");   
+	        System.out.println(band);
+	    
+	        String dateofjoin = (String) employeeObject.get("dateofjoin");   
+	        System.out.println(dateofjoin);
+	    
+	    
+	}
+}

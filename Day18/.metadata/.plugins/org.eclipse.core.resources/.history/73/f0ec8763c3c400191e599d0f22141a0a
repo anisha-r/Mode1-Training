@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+ <a href='CreateAccount.jsp'>CreateAccount</a>
+  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+  <a href='SearchAccount.jsp'>SearchAccount</a>
+    &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+  <a href='CloseAccount.jsp'>CloseAccount</a>
+  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+  <a href='DepositAccount.jsp'>DepositAccount</a>
+  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+  <a href='WithdrawAccount.jsp'>WithdrawAccount</a>
+  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+ <a href='UpdateAccount.jsp'>UpdateAccount</a>
+
+</body>
+</html>

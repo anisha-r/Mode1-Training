@@ -1,0 +1,42 @@
+package com.hcl.ex;
+
+
+
+
+public class Custom {
+  /**
+   * The main entry point.
+   * @throws NegativeException throw NegativeException. 
+   * @throws NumberZeroException throw NumberZeroException.
+   */
+  public void sum(int a,int b) throws NegativeException, NumberZeroException {
+    int c;
+    boolean flag = true;
+    if (a < 0 || b < 0) {
+      flag = false;
+      throw new NegativeException("Negative nos not allowed..");
+    }
+    if (a == 0 || b == 0) {
+      flag = false;
+      throw new NumberZeroException("Zeros is invalid");
+    }
+    if (flag == true) {
+      c = a + b;
+      System.out.println("sum is" + c);
+    }
+  }
+   /**
+    * method for business logic.
+    * @param args are a and b.
+    */
+public static void main(String[] args) {
+		try {
+			int a=5,b=7;
+			new Custom().sum(a, b);
+		} catch (NegativeException | NumberZeroException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

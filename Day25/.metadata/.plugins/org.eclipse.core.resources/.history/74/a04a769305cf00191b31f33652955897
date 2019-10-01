@@ -1,0 +1,56 @@
+package com.hcl.hib;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+public class CollegeCRUD {
+	
+	
+//	public String generateFeedbackId(Feedback fb) {
+//		String fbId;
+//		String cmd = "select max(fbId) fid from feedback ";
+//		String fbid = " ";
+//		Feedback res=searchDepart(d.getDeptno());
+//		SessionFactory sf=HibernateUtil.getConnection();
+//		Session s=sf.openSession();
+//		fbid=fb.getString("fid");
+//		int id = Integer.parseInt(fbid.substring(1));
+//		id++;
+//		String formated = String.format("%03d", id);
+//		fbid = "C" +formated;
+//	}
+	public List<String> SubjectList(String ins) {
+	SessionFactory sf=HibernateUtil.getConnection();
+	Session s = sf.openSession();
+	Query q=s.createQuery("select distinct subject from Subject where instructor=" +ins+"'");
+	List<String> lstinstr =q.list();
+	return lstinstr;
+  }
+	public static List<String> getInstructors() {
+		SessionFactory sf=HibernateUtil.getConnection();
+		Session s = sf.openSession();
+		Query q=s.createQuery("select distinct instructor from Subject");
+		List lstsub =q.list();
+		List<String> lst=new ArrayList<String>();
+		for (Object object : lstsub) {
+			lst.add((String)object);
+		}
+		return lst;
+			
+	}
+	
+	public String insertSubject(Subject sub) {
+		SessionFactory sf=HibernateUtil.getConnection();
+		Session s=sf.openSession();
+		Transaction t=s.beginTransaction();
+		s.save(sub);
+		t.commit();
+		return "Record Inserted";
+	}
+
+}

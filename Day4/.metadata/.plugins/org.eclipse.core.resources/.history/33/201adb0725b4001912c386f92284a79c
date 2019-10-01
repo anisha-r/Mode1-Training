@@ -1,0 +1,36 @@
+package com.hcl.Ex;
+
+
+
+class InvalidEmailException extends Exception {
+	public InvalidEmailException(String error) {
+	super(error);
+	}
+}
+class InvalidUserNameException extends Exception {
+	public InvalidUserNameException(String error) {
+		super(error);
+		}
+	}
+	
+
+public class ExC { 
+	
+	public void show(String x,String y) throws InvalidEmailException {
+		boolean flag=true;
+		
+		if(x!="@") {
+			flag=false;
+			throw new InvalidEmailException("incorrect email");
+		}
+	
+	}public static void main(String[] args) {
+		try {
+			String x = "Anisha@gmail.com";
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

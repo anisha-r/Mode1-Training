@@ -1,0 +1,50 @@
+package com.hcl.json;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Iterator;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+public class ReadJson1 {
+	
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) {
+		JSONParser parser = new JSONParser();
+		try {
+			Object obj =parser.parse(new FileReader("C:/Users/Coalesce/Downloads/employee.json.json"));
+			JSONObject  js = (JSONObject) obj;
+			
+			int no = (Integer)js.get("no");
+			String name=(String)js.get("name");
+			int salary =(Integer)js.get("salary");
+			String band=(String)js.get("band");
+			int dateofjoin =(Integer)js.get("dateofjoin");
+			//JSONArray arr=(JSONArray)js.get("employee");
+			//System.out.println(arr);
+			
+			System.out.println("No :" +no);
+			System.out.println("Name :" +name);
+			System.out.println("Salary :" +salary);
+			System.out.println("Band :" +band);
+			System.out.println("DateOfJoin :" +dateofjoin);
+			//Iterator<String> iterator=arr.iterator();
+			//while(iterator.hasNext()){
+			//	System.out.println(iterator.next());
+			//}
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+}

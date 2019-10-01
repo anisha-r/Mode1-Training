@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form method="post" action="login.html">
+<center>
+<table border="3" cellspacing="30" cellpadding="30">
+	<tr>
+		<th>My Details Section</th>
+		<th>My Manager Details Section</th>
+	</tr>
+	<tr>
+		<th colspan="2">
+			My Leave Application Section
+		</th>
+	</tr>
+	<tr>
+		<th colspan="2">
+			My Reporting Employee's Pending Leave Applications Section
+		</th>
+	</tr>
+</table>
+</center>
+</form>
+</body>
+</html>

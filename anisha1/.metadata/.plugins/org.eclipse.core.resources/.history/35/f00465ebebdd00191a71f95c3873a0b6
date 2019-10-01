@@ -1,0 +1,70 @@
+package com.hcl.model;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+import javax.json.Json;
+import javax.json.JsonArray;
+import javax.json.JsonObject;
+import javax.json.JsonReader;
+import javax.json.JsonValue;
+
+
+
+public class Model {
+
+	public static final String JSON_FILE="document.json";
+	
+	public static void main(String[] args, Object employee) throws IOException {
+		InputStream fis = new FileInputStream(JSON_FILE);
+		
+		//create JsonReader object
+		JsonReader jsonReader = Json.createReader(fis);
+		
+		/**
+		 * We can create JsonReader from Factory also
+		JsonReaderFactory factory = Json.createReaderFactory(null);
+		jsonReader = factory.createReader(fis);
+		*/
+		
+		//get JsonObject from JsonReader
+		JsonObject jsonObject = jsonReader.readObject();
+		
+		//we can close IO resource and JsonReader now
+		jsonReader.close();
+		fis.close();
+		
+		//Retrieve data from JsonObject and create Employee bean
+		Employee emp = new Employee();
+		
+		emp.setNo(jsonObject.getInt("no"));
+		emp.setName(jsonObject.getString("name"));
+		emp.setSalary(jsonObject.getInt("salary"));
+		emp.setBand(jsonObject.getString("band"));
+		emp.setDateofjoin(jsonObject.getString("dateofjoin"));
+		
+		//reading arrays from json
+		JsonArray jsonArray = jsonObject.getJsonArray("employees");
+		long[] numbers = new long[jsonArray.size()];
+		int index = 0;
+		for(JsonValue value : jsonArray){
+			numbers[index++] = Long.parseLong(value.toString());
+		}
+
+		
+		//reading inner object from json object
+		JsonObject innerJsonObject = jsonObject.getJsonObject("employee");
+		Employee employee1 = new Employee();
+		employee1.setNo(innerJsonObject.getInt("no"));
+		employee1.setName(innerJsonObject.getString("name"));
+		employee1.setSalary(innerJsonObject.getInt("salary"));
+		employee1.setBand(innerJsonObject.getString("band"));
+		employee1.setDateofjoin(innerJsonObject.getString("dateofjoin"));
+		
+		
+		//print employee bean information 
+		System.out.println(emp);
+		
+	}
+
+}

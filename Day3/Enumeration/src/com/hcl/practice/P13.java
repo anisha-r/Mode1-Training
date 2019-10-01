@@ -1,0 +1,16 @@
+package com.hcl.practice;
+
+enum Test1 {
+	A,B,X,Y,P,C,N;
+	private Test1() {
+		System.out.println("hi");
+	}
+}
+
+public class P13 {
+	public static void main(String[] args) {
+		Test1 t=Test1.X;
+	}
+
+}
+

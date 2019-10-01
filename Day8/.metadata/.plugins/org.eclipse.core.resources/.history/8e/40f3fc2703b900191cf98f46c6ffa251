@@ -1,0 +1,21 @@
+package com.hcl.jdbc;
+
+import java.util.Scanner;
+
+public class EmployUpdate {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int empno,basic;
+		String desig;
+		System.out.println("enter employno");
+		empno=sc.nextInt();
+		System.out.println("enter desig ");
+		desig=sc.next();
+		System.out.println("enter basic");
+		basic=sc.nextInt();
+		String cmd = "Update Employ set Desig=?, Basic=?, where empno=?";
+	}
+
+}

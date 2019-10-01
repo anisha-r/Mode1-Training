@@ -1,0 +1,34 @@
+package com.hcl.practice;
+
+class Employ {
+	int empno;
+	String name;
+	double basic;
+	@Override
+	public String toString() {
+		return "Employ [empno=" + empno + ", name=" + name + ", basic=" + basic + "]";
+	}
+	public Employ(int empno, String name, double basic) {
+		super();
+		this.empno = empno;
+		this.name = name;
+		this.basic = basic;
+	}
+	
+	
+}
+class Amit extends Employ {
+
+	public Amit(int empno, String name, double basic) {
+		super(empno, name, basic);
+		// TODO Auto-generated constructor stub
+	}
+	
+}
+class Vinod extends Employ {
+	
+}
+
+public class SupCon {
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.anisha&apos; to &apos;SOAPWebClient/src&apos;&#x0D;&#x0A;- Original project: &apos;SOAPWebServiceClient&apos;&#x0D;&#x0A;- Destination element: &apos;SOAPWebClient/src&apos;&#x0D;&#x0A;- Original element: &apos;SOAPWebServiceClient/src/com.anisha&apos;" description="Copy package" destination="=SOAPWebClient/src" element1="/src&lt;com.anisha" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1568878985509" version="1.0"/>
+</session>

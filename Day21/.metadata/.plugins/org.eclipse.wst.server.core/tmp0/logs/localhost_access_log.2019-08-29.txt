@@ -1,0 +1,9 @@
+127.0.0.1 - - [29/Aug/2019:14:18:18 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:14:18:20 +0530] "GET /EMSProject/ApplyLeave.jsp HTTP/1.1" 500 2874
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:14:19:44 +0530] "GET /EMSProject/ApplyLeave.jsp HTTP/1.1" 500 2873
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:14:20:15 +0530] "GET /EMSProject/login.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:14:20:26 +0530] "POST /EMSProject/Login.jsp HTTP/1.1" 200 2051
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:14:24:49 +0530] "POST /EMSProject/Login.jsp HTTP/1.1" 200 2210
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:14:27:21 +0530] "POST /EMSProject/Login.jsp HTTP/1.1" 200 2210
+127.0.0.1 - - [29/Aug/2019:17:27:12 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:17:27:25 +0530] "POST /EMSProject/Login.jsp HTTP/1.1" 200 2211

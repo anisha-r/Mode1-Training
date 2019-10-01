@@ -1,0 +1,22 @@
+package com.hcl.beans;
+
+public class Calc {
+	
+	private String firstNo;
+	private String secondNo;
+	public String getFirstNo() {
+		return firstNo;
+	}
+	public void setFirstNo(String firstNo) {
+		this.firstNo = firstNo;
+	}
+	public String getSecondNo() {
+		return secondNo;
+	}
+	public void setSecondNo(String secondNo) {
+		this.secondNo = secondNo;
+	}
+	
+	
+
+}

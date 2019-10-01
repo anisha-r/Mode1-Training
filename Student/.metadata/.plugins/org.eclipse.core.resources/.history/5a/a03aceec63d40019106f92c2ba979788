@@ -1,0 +1,49 @@
+package com.hcl.student.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.hcl.student.dao.StudentDao;
+import com.hcl.student.model.Student;
+
+ 
+@Service
+@Transactional
+public class StudentServiceImpl implements StudentService {
+
+	@Autowired
+	private StudentDao studentDAO;
+	
+	// @Override
+	@Transactional
+	public void addStudent(Student employee) {
+		studentDAO.addStudent(employee);
+	}
+	// @Override
+	@Transactional
+	public List<Student> getAllStudents() {
+		return studentDAO.getAllStudents();
+	}
+    
+	// @Override
+	@Transactional
+	public void deleteStudent(Integer employeeId) {
+		studentDAO.deleteStudent(employeeId);
+	}
+
+	public Student getStudent(int empid) {
+		return studentDAO.getStudent(empid);
+	}
+
+	public Student updateStudent(Student employee) {
+		return studentDAO.updateStudent(employee);
+	}
+
+	public void setStudentDao(StudentDao studentDAO) {
+		this.studentDAO = studentDAO;
+	}
+
+}

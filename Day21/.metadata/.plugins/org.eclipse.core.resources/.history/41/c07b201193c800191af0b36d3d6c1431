@@ -1,0 +1,27 @@
+<%@page import="com.hcl.ems.Employee"%>
+<%@page import="com.hcl.ems.EmsDAO"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	int empId=Integer.parseInt((String)session.getAttribute("user"));
+	EmsDAO dao=new EmsDAO();
+	Employee employee=dao.myDetails(empId);
+	out.println("Employee Id  " +employee.getEmpId()); 
+	out.println("Full Name  " +employee.getEmpName());
+	out.println("Email " + employee.getEmpEmail());
+	out.println("Mobile No " +employee.getEmpMobNo());
+	out.println("Date joined " +employee.getEmpDateJoin());
+	out.println("Department " +employee.getEmpDptName());
+	out.println("Avilable leave balance" +employee.getEmp_leave_balance());
+%>
+	
+	
+</body>
+</html>

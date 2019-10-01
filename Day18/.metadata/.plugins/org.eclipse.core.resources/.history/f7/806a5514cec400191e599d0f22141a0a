@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="3">
+  <tr>
+     <th>StockId</th>
+     <th>IemName</th>
+     <th>Price</th>
+     <th>QuantityAvail</th>
+     <th>Update</th>
+     <th>Delete</th>
+  </tr>
+
+</body>
+</html>

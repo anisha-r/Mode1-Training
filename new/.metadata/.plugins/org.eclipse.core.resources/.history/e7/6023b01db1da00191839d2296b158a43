@@ -1,0 +1,29 @@
+package com.anisha;
+
+import java.rmi.RemoteException;
+
+public class MainApplication {
+
+
+		
+		public static void main(String[] args) {
+			
+			String result;
+			
+			AnishaProxy ani = new AnishaProxy();
+			
+			try {
+				result= ani.getName();
+				System.out.println("Anisha details " +result);
+			} catch (RemoteException e) {
+				e.printStackTrace();
+			}
+			
+			
+			
+		}
+
+	}
+
+
+

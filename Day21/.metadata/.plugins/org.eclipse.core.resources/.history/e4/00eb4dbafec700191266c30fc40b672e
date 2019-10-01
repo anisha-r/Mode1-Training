@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head> <link rel="shortcut icon" href="#">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+       <form method="post" action="Login111">
+         <center>
+         
+		<h2>Please Login :</h2>
+		<table><tr>
+		UserName : 
+		<td><input type="text" name="username" size="50"></td></tr>
+		<tr>Password : <td><input type="password" name="pass" size="50"></td></tr>
+		<tr> <td colspan="2"><input type="submit" value="Login"></td></tr>
+	</table>
+		</center>
+		</form>
+</body>
+</html>

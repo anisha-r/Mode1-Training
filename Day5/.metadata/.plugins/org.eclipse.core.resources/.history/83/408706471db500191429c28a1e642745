@@ -1,0 +1,29 @@
+package com.hcl.as;
+
+import java.io.DataOutputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class DaataOut {
+  /**
+   * method for data in output stream.
+   * @param args for creating the file.
+   */
+  public static void main(String[] args) {
+    try {
+     DataOutputStream dout = new DataOutputStream(new FileOutputStream("c:/files/data.txt"));
+     dout.writeInt(12);
+     dout.writeUTF("hcl");
+     dout.writeDouble(58466.6);
+     dout.writeBoolean(true);
+     dout.close();
+     System.out.println("File created");
+   } catch (FileNotFoundException e) {
+     e.printStackTrace();
+   } catch (IOException e) {
+     e.printStackTrace();
+}
+	}
+
+}

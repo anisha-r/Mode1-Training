@@ -1,0 +1,45 @@
+package com.hcl.json;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
+public class ReadJson {
+	 public static void main(String[] args) {
+		  BufferedReader objReader = null;
+		  try {
+		   String strCurrentLine;
+
+		   objReader = new BufferedReader(new FileReader(""));
+
+		   while ((strCurrentLine = objReader.readLine()) != null) {
+
+		    System.out.println(strCurrentLine);
+		   }
+
+		  } catch (IOException e) {
+
+		   e.printStackTrace();
+
+		  } finally {
+
+		   try {
+		    if (objReader != null)
+		     objReader.close();
+		   } catch (IOException ex) {
+		    ex.printStackTrace();
+		   }
+		  }
+		 }
+		
+
+
+
+	}
+
+

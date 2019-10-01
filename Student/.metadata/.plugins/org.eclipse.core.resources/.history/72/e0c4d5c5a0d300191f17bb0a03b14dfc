@@ -1,0 +1,17 @@
+package com.hcl.student.dao;
+
+public class StudentDAOImpl implements StudentDao {
+	
+	public String addStudent(Student student) {
+		return null;
+	}
+
+	public String getStudent(Student student) {
+		return null;
+	}
+
+	public String updateStudent(Student student) {
+		return null;
+	}
+
+}

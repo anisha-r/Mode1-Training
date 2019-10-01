@@ -1,0 +1,15 @@
+package com.hcl.ex;
+
+public class NumberZeroException extends Exception {
+/**
+ * method used for business logic.
+ * @param error parameters.
+ */
+  public NumberZeroException(String error) { 
+super(error); 
+	
+
+	}
+
+	}
+	

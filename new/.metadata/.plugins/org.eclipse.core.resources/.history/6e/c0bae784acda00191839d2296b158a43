@@ -1,0 +1,27 @@
+package com.anisha;
+
+public class MainApplication {
+
+
+		
+		public static void main(String[] args) {
+			
+			String result;
+			
+			AnishaProxy ani = new AnishaProxy();
+			
+			try {
+				result= ani.getName();
+				System.out.println("Janani details " +result);
+			} catch (RemoteException e) {
+				e.printStackTrace();
+			}
+			
+			
+			
+		}
+
+	}
+
+
+

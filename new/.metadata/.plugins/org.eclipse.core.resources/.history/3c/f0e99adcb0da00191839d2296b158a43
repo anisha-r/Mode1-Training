@@ -1,0 +1,25 @@
+package com.jaanu;
+
+	import java.rmi.RemoteException;
+
+
+	public class MainApp {
+		
+		public static void main(String[] args) {
+			
+			int  result=0;
+			
+			JananiDemoProxy ani = new JananiDemoProxy();
+			
+			try {
+				result= ani.getInt();
+				System.out.println("Janani details " +result);
+			} catch (RemoteException e) {
+				e.printStackTrace();
+			}
+			
+			
+			
+		}
+
+}

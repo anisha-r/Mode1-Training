@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.anisha.sample.java8.Mainmethods&apos; to &apos;MultiInterfaceLambdaExp&apos;&#x0D;&#x0A;- Original project: &apos;LambdaExpression&apos;&#x0D;&#x0A;- Original element: &apos;com.anisha.sample.java8.Mainmethods&apos;&#x0D;&#x0A;- Renamed element: &apos;com.anisha.sample.java8.MultiInterfaceLambdaExp&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Mainmethods&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.anisha.sample.java8{Mainmethods.java[Mainmethods" matchStrategy="1" name="MultiInterfaceLambdaExp" qualified="false" references="true" similarDeclarations="false" stamp="1568607764756" textual="false" version="1.0"/>
+</session>

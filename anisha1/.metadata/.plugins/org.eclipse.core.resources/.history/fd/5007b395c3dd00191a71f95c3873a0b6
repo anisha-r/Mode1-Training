@@ -1,0 +1,30 @@
+package com.hcl.json;
+
+import java.util.Scanner;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class MultiJsonExample {
+	
+	public static void main(String[] args) {
+	JSONObject j= new JSONObject();
+	Scanner sc = new Scanner(System.in);{
+
+	for (int i = 0; i < 3; i++) {
+		JSONArray arr = new JSONArray();
+		System.out.println("enter name");
+		arr.add(sc.nextLine());
+		System.out.println("enter the age:");
+		arr.add(sc.nextLine());
+		System.out.println("enter the email");
+		arr.add(sc.nextLine());
+		j.put(i, arr);
+	}
+	System.out.println(j);
+	}    
+
+	}
+
+
+}

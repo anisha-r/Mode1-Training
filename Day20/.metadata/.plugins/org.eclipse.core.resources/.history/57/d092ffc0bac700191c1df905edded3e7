@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="ag" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+   <ag:set var="no" value="${param.no}"> </ag:set>
+   Selected value is : <ag:out value="${no}" />
+   <ag:choose>
+      <ag:when test="${no==1}">
+        <ag:out value="Hi i am anisha"> </ag:out> 
+          </ag:when>
+         <ag:when test="${no==3 }">
+       <ag:out value="Hi i am priya"></ag:out>
+          </ag:when>
+        <ag:when test="${no==4 }">
+       <ag:out value="Hi i am janani"></ag:out>
+          </ag:when>
+       <ag:when test="${no==5 }">
+       <ag:out value="Hi i am hema"></ag:out>
+          </ag:when>
+          <ag:otherwise>
+          <ag:out value="Invalid choice.."></ag:out>
+          </ag:otherwise>
+      </ag:choose>
+</body>
+</html>

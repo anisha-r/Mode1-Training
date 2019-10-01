@@ -1,0 +1,53 @@
+package com.hcl.json;
+
+import java.util.Scanner;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class JsonExample3 {
+	public static void main(String args[]){ 
+//		JSONObject obj=new JSONObject();
+//		  for (int i = 0; i < 3; i++) {
+//			  JSONArray arr = new JSONArray();  
+//			  arr.add("anu"+i);
+//		      arr.add("sonoo");  
+//		      arr.add("anisha");
+//		      arr.add(25+i);
+//		      arr.add(1000*i);
+//		     // arr.add(new Integer(27));    
+//		      // arr.add(new Double(600000));   
+//		     obj.put(1, arr);
+//		}
+//		  System.out.print(obj);  
+//		  }  
+//	  JSONArray arr = new JSONArray();  
+//	  for (int i = 0; i < 3; i++) {
+//	JSONObject obj=new JSONObject();
+//	  obj.put(1,1000*i);
+//	  obj.put(2,"anisha");
+//	  obj.put(3,2*i);
+//    // arr.add(new Integer(27));    
+//     // arr.add(new Double(600000));   
+//    arr.add(obj);
+//}
+// System.out.print(arr); 
+		
+		JSONObject j= new JSONObject();
+		Scanner sc = new Scanner(System.in);
+		for (int i = 0; i < 3; i++) {
+			JSONArray arr = new JSONArray();
+			System.out.println("enter name");
+			arr.add(sc.nextLine());
+			System.out.println("enter the dob:");
+			arr.add(sc.nextInt());
+			System.out.println("enter the email");
+			arr.add(sc.nextLine());
+			j.put(i, arr);
+		}
+		System.out.println(j);
+		}    
+
+
+
+}

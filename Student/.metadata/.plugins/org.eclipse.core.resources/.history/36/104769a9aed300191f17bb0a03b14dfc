@@ -1,0 +1,59 @@
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="com.hcl.student.Controller.StudentController"%>
+<%@page import="com.hcl.student.model.Student"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form method="get" action="AddStudent.jsp" >
+ <center>
+  Roll Number:
+  <input type="text" name="rollNum" /> <br/><br/>
+  Student Name:
+  <input type="text" name="sName" />  <br/><br/>
+  Age:
+  <input type="text" name="age" /> <br/><br/>
+  Gender:
+  <input type="radio" name="gender" value="male"> Male<br/><br>
+  <input type="radio" name="gender" value="female"> Female<br/><br> 
+  Country:
+  <select>
+  <option value="india">India</option>
+  <option value="australia">Australia</option>
+  <option value="japan">Japan</option>
+  <option value="china">China</option> <br/><br/>
+</select> 
+  Date of Join:
+  <input type="date" name="dateOfJoin" /> <br/><br/>
+  Final score:
+  <input type="text" name="fScore" /> <br/><br/>
+  <input type="submit" value="click" />
+  
+  </center>
+
+</form>
+<% if(request.getParameter("rollNum") !=null && 
+request.getParameter("sName") !=null &&
+request.getParameter("age") !=null &&
+request.getParameter("gender") !=null &&
+request.getParameter("country") !=null &&
+request.getParameter("dateOfJoin") !=null&&
+request.getParameter("fScore") !=null) {
+	Student s=new Student();
+	s.setRollNum(Integer.parseInt(request.getParameter("rollNum")));
+	s.setsName(request.getParameter("sName"));
+	s.setGender(request.getParameter("gender"));
+	s.setCountry(request.getParameter("country"));
+	DateOfJoin Date=new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("startDate")); 
+	s.setfScore(Integer.parseInt(request.getParameter("fScore")));
+	StudentController st=new StudentController();
+	out.println(st.addStudent(s));
+}
+%>
+</body>
+</html>

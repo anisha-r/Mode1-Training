@@ -1,0 +1,46 @@
+package com.journaldev.jaxrs.dao;
+
+import java.util.List;
+
+import javax.ws.rs.core.Response;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.journaldev.jaxrs.model.Employee;
+
+
+@Repository
+public class EmployeeDaoImpl implements EmployeeDao {
+	
+	@Autowired
+	private SessionFactory sessionFactory;
+
+	@Override
+	public Response addEmployee(Employee e) {
+		return null;
+	}
+
+	@Override
+	public void deleteEmployee(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Employee getEmployee(int id) {
+		return (Employee) sessionFactory.getCurrentSession().get(
+				Employee.class, id);
+	}
+
+	@Override
+	public List<Employee> getAllEmployees() {
+		
+
+		return sessionFactory.getCurrentSession().createQuery("from Employee")
+				.list();
+	}
+
+	
+}

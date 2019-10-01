@@ -1,0 +1,7 @@
+package com.hcl.ems;
+
+public class EmsBAL {
+	public static boolean loginBal(int empId,String secretCode) {
+		return new EmsDAO().loginDao(empId, secretCode);
+	}
+}

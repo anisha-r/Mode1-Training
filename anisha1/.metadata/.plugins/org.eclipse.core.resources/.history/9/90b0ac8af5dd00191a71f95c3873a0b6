@@ -1,0 +1,18 @@
+package com.hcl.json.service;
+
+import javax.ws.rs.core.Response;
+
+import com.hcl.json.model.Employee;
+
+public interface EmployServiceInterface {
+	
+
+	public Response addEmployee(Employee e);
+	
+	public Response deleteEmployee(int id);
+	
+	public Employee getEmployee(int id);
+	
+	public Employee[] getAllEmployees();
+
+}

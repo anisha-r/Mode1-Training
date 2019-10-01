@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;WSPublisher.java&apos; to &apos;FaultDemo/src/com.hcl.name&apos;&#x0D;&#x0A;- Original project: &apos;WithAnnotation&apos;&#x0D;&#x0A;- Destination element: &apos;FaultDemo/src/com.hcl.name&apos;&#x0D;&#x0A;- Original element: &apos;helloservice.endpoint.WSPublisher.java&apos;" description="Copy compilation unit" destination="=FaultDemo/src&lt;com.hcl.name" element1="/src&lt;helloservice.endpoint{WSPublisher.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1568890092815" units="1" version="1.0"/>
+</session>

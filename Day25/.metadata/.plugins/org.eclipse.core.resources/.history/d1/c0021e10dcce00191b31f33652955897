@@ -1,0 +1,29 @@
+package com.hcl.hib;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.cfg.Configuration;
+
+import com.hcl.hib.Subject;
+
+public class MainProg {
+	public static void main(String[] args) {
+		Configuration cfg=new AnnotationConfiguration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf=cfg.buildSessionFactory();
+		Session s=sf.openSession();
+		Query q=s.createQuery("from Subject");
+		List<Subject> lstsubject=q.list();
+		for (Subject sub : lstsubject) {
+			System.out.println("Year " +sub.getYear());
+			System.out.println("Instructor " +sub.getInstructor());
+			System.out.println("Subject "+sub.getSubject());
+			System.out.println("Theory "+sub.getTheory());
+			System.out.println("Practical"+sub.getPractical());
+}
+	}
+}

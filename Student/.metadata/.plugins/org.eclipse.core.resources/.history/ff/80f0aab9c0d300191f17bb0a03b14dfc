@@ -1,0 +1,48 @@
+<%@page import="java.util.Date"%>
+<%@page import="com.hcl.student.dao.StudentDAOImpl"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="com.hcl.student.Controller.StudentController"%>
+<%@page import="com.hcl.student.model.Student"%>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@taglib uri="http://www.springframework.org/tags/form"
+prefix="springForm"%>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<springForm:form method="POST" commandName="student" action="AddStudent.jsp" >
+ <center>
+  Roll Number:
+  <input type="text" name="rollNum" /> <br/><br/>
+  Student Name:
+  <input type="text" name="sName" />  <br/><br/>
+  Age:
+  <input type="text" name="age" /> <br/><br/>
+  Gender:
+  <input type="radio" id="type1" name="gender" value="male">
+  <label for="type1">Male</label>
+  <input type="radio" name="gender" value="female">
+  <label for="type2">Female</label>
+  Country:
+  <select>
+  <option value="india">India</option>
+  <option value="australia">Australia</option>
+  <option value="japan">Japan</option>
+  <option value="china">China</option> <br/><br/>
+</select> 
+  Date of Join:
+ <input type="date" name="dateOfJoin" /> <br/><br/>
+  Final score:
+  <input type="text" name="fScore" /> <br/><br/>
+  <input type="submit" action="click" />
+  </center>
+
+</springForm:form>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form method="get" action="AddSubject.jsp" >
+
+<select id="theory" id="practical">
+ <option value="maths">Maths</option>
+ <option value="science">Science</option>
+ <option value="social">Social</option>
+ <option value="civics">Civics</option>
+ <option value="geography">Geography</option>
+</select>
+
+ <p>Theory  &nbsp;&nbsp;<input type="text" name="theory"/></p>
+ <p>Practical  &nbsp;&nbsp;<input type="text" name="practical"/></p>
+ <p>Year  &nbsp;&nbsp;<input type="text" name="year"/></p>
+ <p>Instructor  &nbsp;&nbsp;<input type="text" name="Instructor"/></p>
+ <input type="submit" value="click"/>
+
+  
+    <script> 
+    function getAddSubject(){
+    	 
+        int a = document.getElementById('theory');
+        int b = document.getElementById("practical");
+       var list1SelectedValue = list1.options[list1.selectedIndex].value;
+         
+        if (value=='maths')
+        {
+            a.theory=20;
+            a.practical=30;
+        }
+        else if (value=='science')
+        {
+             
+            list2.options.length=0;
+            list2.options[0] = new Option('--Select--', '');
+            list2.options[1] = new Option('Coca Cola', 'Coca Cola');
+            list2.options[2] = new Option('7up', '7up');
+            list2.options[3] = new Option('Pepsi', 'Pepsi');
+            list2.options[4] = new Option('Coffee', 'Coffee');
+            list2.options[5] = new Option('Tea', 'Tea');
+             
+        }
+}
+    </script> 
+ 
+</form>
+</body>
+</html>

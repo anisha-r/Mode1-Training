@@ -1,0 +1,23 @@
+package com.hcl.collections;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrEmploy {
+	
+	public static void main(String[] args) {
+		List lstEmploy = new ArrayList();
+		lstEmploy.add(new Employ(1, "anisha", 65363));
+		lstEmploy.add(new Employ(2, "Sai", 65343));
+		lstEmploy.add(new Employ(3, "anubhav", 65463));
+		lstEmploy.add(new Employ(4, "Vinod", 66363));
+		lstEmploy.add(new Employ(5, "Raghu", 65366));
+		for (Object ob : lstEmploy) {
+			Employ e = (Employ)ob;
+			System.out.println(e);
+			
+		}
+		
+	}
+
+}

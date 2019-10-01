@@ -1,0 +1,6 @@
+package com.hcl.json.dao;
+
+public class EmployDaoInterfaceImpl {
+	
+
+}

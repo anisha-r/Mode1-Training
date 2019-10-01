@@ -1,0 +1,11 @@
+package com.hcl.intf;
+
+interface IOne {
+	void name();
+}
+
+interface IT
+
+public class ITwo {
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.hcl.log.Logincontroller&apos; to &apos;LoginController&apos;&#x0D;&#x0A;- Original project: &apos;Login&apos;&#x0D;&#x0A;- Original element: &apos;com.hcl.log.Logincontroller&apos;&#x0D;&#x0A;- Renamed element: &apos;com.hcl.log.LoginController&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Logincontroller&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.hcl.log{Logincontroller.java[Logincontroller" matchStrategy="1" name="LoginController" qualified="false" references="true" similarDeclarations="false" stamp="1567063284178" textual="false" version="1.0"/>
+</session>

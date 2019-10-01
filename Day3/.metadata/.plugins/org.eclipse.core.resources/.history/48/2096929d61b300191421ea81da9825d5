@@ -1,0 +1,14 @@
+package com.hcl.intf;
+
+interface IOne {
+	void name();
+}
+
+interface ITwo {
+	void email();
+}
+class MultiInh 
+
+public class ITwo {
+
+}

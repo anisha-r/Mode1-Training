@@ -1,0 +1,11 @@
+package com.hcl.ex;
+
+public class InvalidUserNameException {
+
+		public InvalidUserNameException(String error) {
+			super(error);
+			}
+		}
+
+	
+

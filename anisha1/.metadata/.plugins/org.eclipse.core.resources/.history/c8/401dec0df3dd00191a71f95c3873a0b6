@@ -1,0 +1,44 @@
+package com.hcl.json.service;
+
+	import java.util.HashMap;
+	import java.util.Map;
+	import java.util.Set;
+
+	import javax.ws.rs.Consumes;
+	import javax.ws.rs.DELETE;
+	import javax.ws.rs.GET;
+	import javax.ws.rs.POST;
+	import javax.ws.rs.Path;
+	import javax.ws.rs.PathParam;
+	import javax.ws.rs.Produces;
+	import javax.ws.rs.core.MediaType;
+	import javax.ws.rs.core.Response;
+
+import com.hcl.json.model.Employee;
+
+
+	@Path("/employee")
+	@Consumes(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_XML)
+	public abstract class EmployserviceImpl<GenericResponse> implements EmployServiceInterface {
+
+		private static Map<Integer,Employee> emps = new HashMap<Integer,Employee>();
+		
+		
+	
+
+		@Override
+		@GET
+		@Path("/getAll")
+		public Employee[] getAllEmployees() {
+			Set<Integer> ids = emps.keySet();
+			Employee[] e = new Employee[ids.size()];
+			int i=0;
+			for(Integer id : ids){
+				e[i] = emps.get(id);
+				i++;
+			}
+			return e;
+		}
+
+}

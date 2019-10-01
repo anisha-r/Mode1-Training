@@ -1,0 +1,13 @@
+package com.hcl.ex;
+
+public class InvalidEmailException {
+  /**
+	 * Method for business logic.
+	 * @param error parameters.
+	 */
+  public InvalidEmailException(String error) {
+		super(error);
+		}
+	}
+
+

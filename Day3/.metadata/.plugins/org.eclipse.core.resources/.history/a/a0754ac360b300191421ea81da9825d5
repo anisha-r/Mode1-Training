@@ -1,0 +1,14 @@
+package com.hcl.intf;
+
+interface ITraining {
+	void name();
+	void email();
+}
+
+class Hema implements ITraining {
+	
+}
+
+public class IntfDemo {
+
+}

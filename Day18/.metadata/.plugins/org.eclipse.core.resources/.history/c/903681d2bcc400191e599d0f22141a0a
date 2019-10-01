@@ -1,0 +1,9 @@
+package com.hcl.bank;
+
+public class UpdateAccount {
+	
+	private int accountNo;
+	private String city;
+	private String state;
+
+}

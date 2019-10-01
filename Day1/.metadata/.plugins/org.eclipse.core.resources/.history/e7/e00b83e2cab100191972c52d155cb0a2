@@ -1,0 +1,26 @@
+package com.hcl.java;
+
+
+	public class MaxNum {
+		public void check(int a,int b,int c) {
+			if(a>>b && a>>c) {
+				System.out.println("a is greatest" +a);
+			
+			}else if(b>>c){
+				System.out.println("b is greatest" +b);
+			}else {
+				System.out.println("c is greatest" +c);
+		}
+		public static void main(String[] args) {
+			int a = 5;
+			int b = 6;
+			int c = 10;
+			new MaxNum().check(a, b, c);
+				
+	
+		}
+
+	}
+
+
+}

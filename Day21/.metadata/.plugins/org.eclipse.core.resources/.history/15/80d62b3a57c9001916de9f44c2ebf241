@@ -1,0 +1,51 @@
+<%@page import="com.hcl.ems.LeaveHistory"%>
+<%@page import="com.hcl.ems.EmsBAL"%>
+<%@page import="com.hcl.ems.Employee"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	int empId=Integer.parseInt((String)session.getAttribute("user"));
+	Employee employee = EmsBAL.myDetails(empId);
+	
+%>
+<h3><p>  My Leave Application Section</p></h3>
+<table border="2">
+<tr>
+<th>Leave ID</th>
+<th>Number of Days</th>
+<th>Start Date</th>
+<th>End Date</th>
+<th>Leave Type</th>
+<th>Status</th>
+<th>Reason</th>
+<th>Applied On</th>
+<th>Manager Comments</th>
+</tr>
+<%
+int empId=Integer.parseInt((String) session.getAttribute("user"));
+
+//LeaveHistory obj = EmsBAL.getLeaveHistory(empId);
+//out.println("<tr>");
+//out.println("<td>"+obj.getLeaId()+" </td>");
+//out.println("<td>"+obj.getLeaNoOfDays()+" </td>");
+//out.println("<td>"+obj.getLeaStartDate()+" </td>");
+//out.println("<td>"+obj.getLeaEndDate()+" </td>");
+//out.println("<td>"+obj.getLeaType()+" </td>");
+//out.println("<td>"+obj.getLeaStatus()+" </td>");
+//out.println("<td>"+obj.getLeaAppliedOn()+" </td>");
+//out.println("<td>"+obj.getLeaMgrComments()+" </td>");
+
+
+//out.println("</tr>");
+%>
+ 
+</table>
+</body>
+</html>
