@@ -7,7 +7,7 @@
    <maven.comppiler.target>1.8</maven.comppiler.target>
    <maven.compiler.source>1.8</maven.compiler.source>
    <hibernate.version>5.2.11.Final</hibernate.version>
-   <hibernate.validator>5.4.1.Final</hibernate.validator>
+   <hibernate.validator>5.4.2.Final</hibernate.validator>
   </properties>
  <dependencies>
    
